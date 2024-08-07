@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const response = axios.get("/userAuth/users");
+    const response = await axios.get("/userAuth/users");
     const users = response.data;
 
     const tbody = document.querySelector("#usersTable tbody");
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       tbody.appendChild(row);
     });
   } catch (error) {
-    console.error("Failed to fetch users");
+    console.error("Failed to fetch users", error);
     alert("Failed to load user");
   }
 });
