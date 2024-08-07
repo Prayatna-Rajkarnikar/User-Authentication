@@ -16,6 +16,6 @@ document
       window.location.href = "/userTable.html";
     } catch (error) {
       console.error("Login Error:", error);
-      alert("Login failed");
+      alert("Login Failed");
     }
   });

@@ -1,3 +1,5 @@
+const message = document.getElementById("message");
+
 document
   .getElementById("registerForm")
   .addEventListener("submit", async (event) => {
@@ -15,9 +17,8 @@ document
         email,
         password,
       });
-      console.log("Registration Response:", response.data);
-      alert("Registration successful", response.data);
-
+      console.log("Registration Response:", response);
+      alert("Registration Successfull");
       document.getElementById("registerForm").reset();
       window.location.href = "/login.html";
     } catch (error) {
